@@ -1,0 +1,65 @@
+#venue-plan{
+    width: 878px;
+}
+.venue-plan-title{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    line-height: 1em;
+}
+.venue-plan-content{
+    background: url("../../assets/bg_normal.svg") no-repeat;
+    width: 878px;
+    height: 586px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+.table-content{
+    padding-top: 42px;
+}
+.ivu-table-body{
+    color: #f7931e;
+
+}
+.table th{
+    color: #fff18a;
+    text-align: center;
+    font-size: 24px;
+}
+.ivu-table-cell{
+    text-align: center;
+    font-size: 24px;
+}
+
+.ivu-table,.ivu-table th,.ivu-table td ,.ivu-table-row-hover td{
+    background-color: transparent!important;
+    border: none;
+}
+.ivu-table-wrapper{
+    border: none;
+}
+.ivu-table:before{
+    background-color: transparent;
+}
+.ivu-table:after{
+    background-color: transparent;
+}
+/*
+.ivu-table-body::-webkit-scrollbar {!*滚动条整体样式*!
+    width: 4px;     !*高宽分别对应横竖滚动条的尺寸*!
+    height: 4px;
+}
+.ivu-table-body::-webkit-scrollbar-thumb {!*滚动条里面小方块*!
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.ivu-table-body::-webkit-scrollbar-track {!*滚动条里面轨道*!
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}*/

@@ -1,0 +1,121 @@
+
+<div id="warning-list">
+
+    <div class="warning-list-title">Alerts List</div>
+    <div class="warning-list-content">
+        <div class="warning_tag_content">
+           <ul>
+               <li id="SUSTYPE_PERSON" class="warning_tag warning_tag-active" @click="switchWarnTag('SUSTYPE_PERSON')">Suspicious People</li>
+               <li id="SUSTYPE_VEHICLE" class="warning_tag" @click="switchWarnTag('SUSTYPE_VEHICLE')">Suspicious Vehicles</li>
+           </ul>
+        </div>
+        <div>
+        <div class="SUSTYPE_PERSON">
+            <carousel arrow="always" dots="none">
+                <carousel-item class="sustype_item" v-for="(item,index) in totalWarningPersonPage">
+                    <div class="person-item" @click="selectPerson(personAlarmList[index*3])">
+                        <div class="venue-item-left">
+                            <div :class="personAlarmList[index*3].levelValue">
+                                <img class="carouse_item_img" :id="personAlarmList[index*3].alarmEventId" :src="baseImagUrl+personAlarmList[index*3].imgUrl">
+                            </div>
+                            <div>
+                                <div class="venue-person-name">{{personAlarmList[index*3].name}}</div>
+                                <div class="venue-person-type">{{personAlarmList[index*3].typeValue}}</div>
+                                <div class="venue-person-time">{{personAlarmList[index*3].checkTime}}</div>
+                            </div>
+                        </div>
+                        <div class="warning_other_person">
+                            <img class="carouse_small_img" v-for="(attach,_index) in personAlarmList[index*3].attendantUrl" :src="baseImagUrl+attach" @click="changeImg(personAlarmList[index*3].alarmEventId,baseImagUrl+attach,$event)" >
+                        </div>
+                    </div>
+                    <div class="person-item"  v-if="(index*3+1)<personAlarmList.length" @click="selectPerson(personAlarmList[index*3+1])">
+                        <div class="venue-item-left">
+                            <div :class="personAlarmList[index*3+1].levelValue">
+                                <img class="carouse_item_img" :id="personAlarmList[index*3+1].alarmEventId" :src="baseImagUrl+personAlarmList[index*3+1].imgUrl">
+                            </div>
+                            <div>
+                                <div class="venue-person-name">{{personAlarmList[index*3+1].name}}</div>
+                                <div class="venue-person-type">{{personAlarmList[index*3+1].typeValue}}</div>
+                                <div class="venue-person-time">{{personAlarmList[index*3+1].checkTime}}</div>
+                            </div>
+                        </div>
+                        <div class="warning_other_person">
+                            <img class="carouse_small_img" v-for="(attach,_index) in personAlarmList[index*3+1].attendantUrl" :src="baseImagUrl+attach" @click="changeImg(personAlarmList[index*3+1].alarmEventId,baseImagUrl+attach,$event)" >
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="person-item" v-if="(index*3+2)<personAlarmList.length" @click="selectPerson(personAlarmList[index*3+2])">
+                        <div class="venue-item-left">
+                            <div :class="personAlarmList[index*3+2].levelValue">
+                                <img class="carouse_item_img" :id="personAlarmList[index*3+2].alarmEventId" :src="baseImagUrl+personAlarmList[index*3+2].imgUrl">
+                            </div>
+                            <div>
+                                <div class="venue-person-name">{{personAlarmList[index*3+2].name}}</div>
+                                <div class="venue-person-type">{{personAlarmList[index*3+2].typeValue}}</div>
+                                <div class="venue-person-time">{{personAlarmList[index*3+2].checkTime}}</div>
+                            </div>
+                        </div>
+                        <div class="warning_other_person">
+                            <img class="carouse_small_img" v-for="(attach,_index) in personAlarmList[index*3+2].attendantUrl" :src="baseImagUrl+attach" @click="changeImg(personAlarmList[index*3+2].alarmEventId,baseImagUrl+attach,$event)" >
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </carousel-item>
+            </carousel>
+        </div>
+        <div class="SUSTYPE_VEHICLE">
+            <carousel dots="none">
+                <carousel-item class="sustype_item" v-for="(item,index) in totalWarningVehiclePage">
+                    <div class="car-item" @click="selectVehicle(vehicleAlarmList[index*3])">
+                        <div class="venue-item-left">
+                            <div :class="vehicleAlarmList[index*3].levelValue">
+                                <img class="carouse_item_img" :id="vehicleAlarmList[index*3].alarmEventId" :src="baseImagUrl+vehicleAlarmList[index*3].imgUrl">
+                            </div>
+                            <div>
+                                <div class="venue-car-num">{{vehicleAlarmList[index*3].plateNum}}</div>
+                                <div class="venue-car-type">{{vehicleAlarmList[index*3].typeValue}}</div>
+                                <div class="venue-car-time">{{vehicleAlarmList[index*3].checkTime}}</div>
+                            </div>
+                        </div>
+                        <div class="warning_other_vechile">
+                            <img class="carouse_small_img" v-for="(attach,_index) in vehicleAlarmList[index*3].attendantUrl" :src="baseImagUrl+attach" @click="changeImg(vehicleAlarmList[index*3].alarmEventId,baseImagUrl+attach,$event)" >
+                        </div>
+                    </div>
+                    <div class="car-item" v-if="(index*3+1)<vehicleAlarmList.length" @click="selectVehicle(vehicleAlarmList[index*3+1])">
+                        <div class="venue-item-left">
+                            <div :class="vehicleAlarmList[index*3+1].levelValue">
+                                <img class="carouse_item_img" :id="vehicleAlarmList[index*3+1].alarmEventId"  :src="baseImagUrl+vehicleAlarmList[index*3+1].imgUrl">
+                            </div>
+                            <div>
+                                <div class="venue-car-num">{{vehicleAlarmList[index*3+1].plateNum}}</div>
+                                <div class="venue-car-type">{{vehicleAlarmList[index*3+1].typeValue}}</div>
+                                <div class="venue-car-time">{{vehicleAlarmList[index*3+1].checkTime}}</div>
+                            </div>
+                        </div>
+                        <div class="warning_other_vechile">
+                            <img class="carouse_small_img" v-for="(attach,_index) in vehicleAlarmList[index*3+1].attendantUrl" :src="baseImagUrl+attach" @click="changeImg(vehicleAlarmList[index*3+1].alarmEventId,baseImagUrl+attach,$event)" >
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="car-item" v-if="(index*3+2)<vehicleAlarmList.length"  @click="selectVehicle(vehicleAlarmList[index*3+2])">
+                        <div class="venue-item-left">
+                            <div :class="vehicleAlarmList[index*3+2].levelValue">
+                                <img class="carouse_item_img" :id="vehicleAlarmList[index*3+2].alarmEventId"  :src="baseImagUrl+vehicleAlarmList[index*3+2].imgUrl">
+                            </div>
+                            <div>
+                                <div class="venue-car-num">{{vehicleAlarmList[index*3+2].plateNum}}</div>
+                                <div class="venue-car-type">{{vehicleAlarmList[index*3+2].typeValue}}</div>
+                                <div class="venue-car-time">{{vehicleAlarmList[index*3+2].checkTime}}</div>
+                            </div>
+                        </div>
+                        <div class="warning_other_vechile">
+                            <img class="carouse_small_img" v-for="(attach,_index) in vehicleAlarmList[index*3+2].attendantUrl" :src="baseImagUrl+attach" @click="changeImg(vehicleAlarmList[index*3+2].alarmEventId,baseImagUrl+attach,$event)" >
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </carousel-item>
+            </carousel>
+        </div>
+        </div>
+    </div>
+</div>

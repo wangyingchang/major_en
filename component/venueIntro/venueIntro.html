@@ -1,0 +1,22 @@
+<div id="venueIntro" >
+    <link rel="stylesheet" href="./component/venueIntro/venueIntro.css">
+    <div>
+        <div class="venue-intro-left">
+            <div class="venue-intro-title">Venue Description</div>
+            <div id="venue-name">{{name}}</div>
+            <div id="venue-address">{{description}}</div>
+            <div id="venue-event">{{gameAlloc}}</div>
+        </div>
+        <div class="venue-intro-right">
+            <img class="venue-img" :src="picture">
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="venue-intro-bottom">
+      <div class="venue-info-item" v-for="(value,key) in numMap">
+          <img class="venue-intro-icon" :title="value.info" :src="['assets/venue/'+key+'.svg']">
+          <div class="venue-intro-count" :title="value.info">{{value.count}}</div>
+      </div>
+    </div>
+    <div class="close-btn" @click="closeVenueIntro"></div>
+</div>

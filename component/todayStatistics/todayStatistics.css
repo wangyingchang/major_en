@@ -1,0 +1,129 @@
+#today-statistics{
+    width: 878px;
+}
+.today-statistics-title{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    line-height: 1em;
+}
+.today-statistics-content{
+    background: url("../../assets/bg_normal.svg") no-repeat;
+    width: 878px;
+    height: 586px;
+    padding-top: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
+}
+.bg_border{
+    background: #50042e;
+    width: 330px;
+    height: 154px;
+    position: relative;
+    border:2px solid #fff;
+}
+#veneu{
+    float: left;
+}
+#work_person{
+    float: right;
+}
+.bg_border:before{
+    content: '';
+     position: absolute;
+    width: 94%;
+    bottom: -2px;
+    top:-2px;
+    left:3%;
+    border-bottom: 2px solid #50042e;
+    border-top: 2px solid #50042e;
+}
+.bg_border:after{
+    content: '';
+     position: absolute;
+    height: 86%;
+    left: -2px;
+    right:-2px;
+    top:7%;
+    border-left: 2px solid #50042e;
+    border-right: 2px solid #50042e;
+}
+.today_img{
+    width: 160px;
+    height: 125px;
+    vertical-align: baseline;
+}
+.color_blue{
+    color: #29abe2;
+    font-size: 30px;
+    line-height: 1em;
+}
+.today_count{
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+#venue_count{
+    text-align: center;
+}
+.today_top_item{
+    display: inline-block;
+    height: 100%;
+    padding-top: 6%;
+    text-align: center;
+    position: absolute;
+    width: 160px;
+}
+.person_flow,.allow_person,.doubt_person{
+    color: #f1b254;
+    /*margin-top: 70px;*/
+    /*position: relative;*/
+    /*float: left;*/
+}
+.allow_person{
+    color: #e16437;
+}
+.doubt_person{
+    color: #ed1c24;
+}
+.car_flow{
+    color: #29abe2;
+}
+.allow_car{
+    color: #1ae5da;
+}
+.doubt_car{
+    color: #18e89c;
+}
+#flow_count,#allow_count,#doubt_count,#car_count,#allow_car_count,#doubt_car_count{
+    font-size: 40px;
+    font-weight: bold;
+}
+.img_person{
+    width: 55px;
+    height: 59px;
+}
+.clear{
+    clear: both;
+}
+.normal_name{
+    font-size: 16px;
+}
+.person_img_content{
+    display: inline-block;
+    text-align: center;
+}
+.person_count{
+    display: inline-block;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*transform: translate(0,-50%);*/
+    margin-left: 20px;
+}
+.today_unit{
+    font-size: 22px;
+    margin-left: 8px;
+    display: inline-block;
+}

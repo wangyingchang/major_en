@@ -1,0 +1,21 @@
+<div id="beyonetIntro" >
+    <link rel="stylesheet" href="./component/beyonetIntro/beyonetIntro.css">
+    <div>
+        <div class="beyonet-intro-left">
+            <div class="beyonet-intro-title">卡口简介</div>
+            <div id="beyonet-name">{{name}}</div>
+            <div id="beyonet-address">{{description}}</div>
+        </div>
+        <div class="beyonet-intro-right">
+            <img class="beyonet-img" :src="picture">
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="beyonet-intro-bottom">
+      <div class="beyonet-info-item" v-for="(value,key) in numMap">
+          <img class="beyonet-intro-icon" :src="['assets/check/'+key+'.svg']">
+          <div class="beyonet-intro-count">{{value}}</div>
+      </div>
+    </div>
+    <div class="close-btn" @click="closeBeyonetIntro"></div>
+</div>

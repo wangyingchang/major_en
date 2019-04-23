@@ -1,0 +1,83 @@
+#trend-analysis{
+    width: 878px;
+}
+.trend-analysis-title{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    line-height: 1em;
+}
+.trend-analysis-content{
+    background: url("../../assets/bg_normal.svg") no-repeat;
+    width: 878px;
+    height: 586px;
+}
+.statistics-echarts{
+    padding: 20px;
+}
+.tag{
+    padding-top: 42px;
+    text-align: center;
+}
+.trend-analysis_tag{
+    background: url("../../assets/bg_yellow_border.svg") no-repeat;
+    width: 120px;
+    height: 38px;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    color: white;
+    font-size: 22px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.trend-analysis-active{
+    background: url("../../assets/bg_statistic_tag.svg") no-repeat;
+}
+.sub-tag{
+    background-color: #50042e;
+    margin-left: 38px;
+    margin-right: 38px;
+    margin-top: 20px;
+    color: #999999;
+    padding: 5px 0;
+}
+.sub-tag ul{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+.trend-sub-tag{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+.trend-sub-active{
+    color: #f1b254;
+}
+.total-echarts{
+    float: left;
+}
+.statistic-type{
+    color: white;
+}
+.statistic-value{
+    color: #00ffff;
+}
+#people-week-sum{
+    font-size:24px;
+    color:#f1b254;
+}
+#hengxian{
+    background-color: #00EFFA;
+    width: 81%;
+    height: 1px;
+    /*position: absolute;*/
+    margin-top: 2.7%;
+    margin-left: 9%;
+    border: 1px solid #f1b254;
+}

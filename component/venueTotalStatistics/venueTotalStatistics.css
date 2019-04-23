@@ -1,0 +1,32 @@
+#venue-total-statistics{
+    width: 878px;
+}
+.venue-total-statistics-title{
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    line-height: 1em;
+}
+.venue-total-statistics-content{
+
+    background: url("../../assets/bg_normal.svg") no-repeat;
+
+    width: 878px;
+    height: 586px;
+    /*height: 700px;*/
+    /*width: 1000px;*/
+}
+#venue-total-echarts{
+    height: 600px !important;
+    width: 900px !important;
+    padding: 30px;
+}
+.venue-total-container{
+    background: url("../../assets/bg_normal.svg") no-repeat;
+
+    width: 878px;
+    height: 586px;
+}

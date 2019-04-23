@@ -1,0 +1,28 @@
+<div id="statistics-analysis">
+    <link href="./component/statisticsAnalysis/statisticsAnalysis.css" rel="stylesheet">
+    <div class="statistics-analysis-title">Trend Analysis</div>
+    <div class="statistics-analysis-content">
+        <div class="tag">
+           <ul>
+               <li id="statistics-analysis-all" class="statistics_tag statistics_tag_active" @click="switchStatisticTag('all')">
+                   All
+               </li>
+               <li id="statistics-analysis-SUSTYPE_PERSON" class="statistics_tag" @click="switchStatisticTag('SUSTYPE_PERSON')">
+                   People
+               </li>
+               <li id="statistics-analysis-SUSTYPE_VEHICLE" class="statistics_tag" @click="switchStatisticTag('SUSTYPE_VEHICLE')">
+                   Vehicles
+               </li>
+               <li id="statistics-analysis-SUSTYPE_GOODS" class="statistics_tag" @click="switchStatisticTag('SUSTYPE_GOODS')">
+                   Items
+               </li>
+           </ul>
+        </div>
+        <div>
+            <div class="statistics-analysis-echarts" id="statistics-analysis-all-echarts" style="width: 750px;height: 450px;"></div>
+            <div class="statistics-analysis-echarts" id="statistics-analysis-SUSTYPE_PERSON-echarts" style="width: 750px;height: 450px;display: none;"></div>
+            <div class="statistics-analysis-echarts" id="statistics-analysis-SUSTYPE_VEHICLE-echarts" style="width: 750px;height: 450px;display: none;"></div>
+            <div class="statistics-analysis-echarts" id="statistics-analysis-SUSTYPE_GOODS-echarts" style="width: 750px;height: 450px;display: none;"></div>
+        </div>
+    </div>
+</div>

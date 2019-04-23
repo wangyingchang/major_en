@@ -1,0 +1,51 @@
+<div id="total-statistics">
+    <link href="./component/totalStatistics/totalStatistics.css" rel="stylesheet">
+    <div class="total-statistics-title">Today's Data on Suspicious People, Vehicles and Items</div>
+    <div class="total-statistics-content">
+        <div class="tag">
+            <ul id="rightdown">
+                <li class="total-statistics_tag total-statistics-active" id="total-statistics-person" @click="changeTag('total-statistics-person')">
+                    People
+                </li>
+                <li class="total-statistics_tag" id="total-statistics-car" @click="changeTag('total-statistics-car')">
+                    Vehicles
+                </li>
+                <li class="total-statistics_tag" id="total-statistics-stuff" @click="changeTag('total-statistics-stuff')">
+                    Items
+                </li>
+            </ul>
+        </div>
+        <div class="total-statistics-echarts">
+            <div class="total-statistics-person">
+                <div class="total-echarts" id="total-statistics-person-echarts" style="width: 400px;height: 450px;">
+                </div>
+                <div class="total-statistics-progress">
+                    <template v-for="item in personDatas">
+                        <div class="progress-line">
+                            <span class="statistic-type" :title="item.suspectTypeValue">{{item.suspectTypeValue}}</span>
+                            <i-progress class="progress-item" :percent="(item.suspectTypeCount/totalPersonCount)*100" hide-info>
+                            </i-progress>
+                            <span class="statistic-value">{{item.suspectTypeCount}}</span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="total-statistics-car" style="display: none;">
+                <div class="total-echarts" id="total-statistics-car-echarts" style="width: 830px;height: 470px;">
+                </div>
+            </div>
+            <div class="total-statistics-stuff" style="display: none;">
+                <template v-for="item in stuffDatas">
+                    <div class="circle-item">
+                        <i-circle :size="150" :percent="(item.suspectTypeCount/totalStuffCount)*100" trail-color="#4c3242" stroke-color="#64ffff">
+                            <span style="font-size: 25px;">{{item.suspectTypeCount}}</span>
+                        </i-circle>
+                        <div class="stuff-name">
+                            {{item.suspectTypeValue}}
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>

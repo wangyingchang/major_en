@@ -1,0 +1,80 @@
+#total-statistics{
+    width: 878px;
+}
+.total-statistics-title{
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    line-height: 1em;
+}
+.total-statistics-content{
+    background: url("../../assets/bg_normal.svg") no-repeat;
+    width: 878px;
+    height: 586px;
+}
+.total-statistics-echarts{
+    padding: 20px;
+}
+.tag{
+    padding-top: 42px;
+    text-align: center;
+}
+.total-statistics_tag{
+    background: url("../../assets/bg_yellow_border.svg") no-repeat;
+    width: 120px;
+    height: 38px;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    color: white;
+    font-size: 22px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.total-statistics-active{
+    background: url("../../assets/bg_statistic_tag.svg") no-repeat;
+}
+.total-echarts{
+    float: left;
+}
+.total-statistics-progress{
+    float: right;
+    width: 420px;
+    font-size: 22px;
+}
+.progress-item{
+    width: 230px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.statistic-type{
+    color: white;
+    width: 120px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    height: 36px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: pre;
+    line-height: 36px;
+}
+.statistic-value{
+    color: #00ffff;
+}
+.progress-line{
+    margin-top: 22px;
+}
+.circle-item{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    width: 202px;
+    margin-top: 35px;
+}
+.stuff-name{
+    font-size: 20px;
+}

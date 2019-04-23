@@ -1,0 +1,77 @@
+#beyonetIntro{
+    z-index: 3000;
+    background: url("../../assets/map/bg_venue_intro.svg") no-repeat;
+    width: 681px;
+    height: 330px;
+    padding: 20px 30px 30px 30px;
+    position: relative;
+    /*display: none;*/
+}
+.beyonet-intro-left{
+    color: white;
+    font-size: 22px;
+    /*float: left;*/
+    width: 390px;
+}
+#beyonet-name,#beyonet-address{
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1em;
+}
+#beyonet-event{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1em;
+}
+.beyonet-intro-title{
+    color: #fff18a;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1em;
+}
+.beyonet-intro-right{
+    float: right;
+}
+.beyonet-img{
+    padding-top: 20px;
+    display: inline-block;
+    width: 230px;
+    height: 130px;
+}
+.beyonet-intro-icon{
+    width: 51px;
+    height: 51px;
+}
+.beyonet-intro-icon{
+    display: block;
+}
+.beyonet-info-item{
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+}
+.beyonet-intro-count{
+    color: #f15a24;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 1em;
+}
+.beyonet-intro-bottom{
+    margin-top: 38px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+.close-btn{
+    background: url("../../assets/ic_close_btn.svg") no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:6px;
+    right: 15px;
+    cursor: pointer;
+}

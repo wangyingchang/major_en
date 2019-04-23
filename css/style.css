@@ -1,0 +1,323 @@
+body{
+    overflow: auto;
+}
+#app{
+    width: 3840px;
+    height: 2160px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    background: url("../assets/ic_bg.png") no-repeat;
+}
+.header{
+    padding-top: 30px;
+    text-align: center;
+}
+.header-title{
+    background:url("../assets/bg_title.png") no-repeat center;
+    color: white;
+    font-size: 35px;
+    height: 80px;
+    line-height: 72px;
+    text-indent: -31px;
+}
+.content{
+    width: 100%;
+}
+.left-content{
+    margin-left: 25px;
+    margin-top: -5px;
+    float: left;
+}
+.map-container{
+    background: url("../assets/bg_map.png") no-repeat;
+    width: 1975px;
+    height: 1963px;
+    float: left;
+    margin-left: 25px;
+    margin-top: 48px;
+    position: relative;
+    z-index: 5;
+    /*padding: 5px;*/
+    /*box-sizing: border-box;*/
+    /*-moz-box-sizing:border-box; !* Firefox *!*/
+    /*-webkit-box-sizing:border-box; !* Safari *!*/
+}
+#map{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    /*bottom: 5px;*/
+    /*right: 5px;*/
+    width: 99.5%;
+    height: 99.5%;
+    background: rgba(0,0,0,0);
+}
+.right-content{
+    float: left;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+.clear{
+    clear: both;
+}
+.activity{
+    position: absolute;
+    z-index: 1000;
+    top:40px;
+    left: 80px;
+}
+.protect{
+    position: absolute;
+    bottom: 20px;
+}
+.today-activity{
+    font-size: 42px;
+    color:white;
+    text-align: center;
+    letter-spacing: 5px;
+    line-height: 76px;
+    margin-bottom: 30px;
+
+}
+.major_number{
+    display: inline-block;
+    font-size: 84px;
+    font-weight: bold;
+}
+.major_number span{
+    display: inline-block;
+    width: 76px;
+    height: 88px;
+    line-height: 88px;
+    background-color: #590432;
+}
+.protect{
+    z-index: 1000;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+.protect-chart{
+    width: 341px;
+    height: 269px;
+    background: url("../assets/map/bg_protect_normal.svg") no-repeat;
+    cursor: pointer;
+}
+.protect-chart div{
+    margin: auto;
+}
+.venuePlan,.trend-analysis{
+    display: none;
+}
+.resource-type{
+    z-index: 1000;
+    position: absolute;
+    right: 30px;
+    top: 45px;
+}
+/*.resource-dropdown .ivu-select-dropdown{*/
+    /*background: transparent;*/
+    /*padding: 0!important;*/
+    /*!*left: 25px!important;*!*/
+    /*width: 150px;*/
+    /*font-size: 20px!important;*/
+/*}*/
+.resource-dropdown{
+    float: right;
+    margin-left: 10px;
+}
+.resource-dropdown ul{
+}
+.resource-dropdown li{
+    color: white;
+    background-color: #480b33;
+    text-align: center;
+    /*font-size: 22px;*/
+    font-size: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+}
+.resource-dropdown li:hover{
+    background-color: #480b33;
+}
+.ivu-dropdown-rel,.select-btn{
+}
+.resource-select-title{
+    background: #470B33;
+    width: 241px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    color:white;
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    border: solid 2px white;
+    position: relative;
+    cursor: pointer;
+}
+.resource-select-title:before{
+    content: '';
+    position: absolute;
+    width: 94%;
+    bottom: -2px;
+    top:-2px;
+    left:3%;
+    border-bottom: 2px solid #50042e;
+    border-top: 2px solid #50042e;
+}
+.resource-select-title:after{
+    content: '';
+    position: absolute;
+    height: 83%;
+    left: -2px;
+    right:-2px;
+    top:8%;
+    border-left: 2px solid #50042e;
+    border-right: 2px solid #50042e;
+    user-select: none;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+}
+.resource-select-options{
+    display: none;
+}
+.resourceOpened{
+    display: block;
+}
+.resourceSelected{
+    background-color: #480b33;
+    color: white;
+}
+li.resourceNormal{
+    background-color: #350828;
+    color: #b3b3b3;
+}
+.icon-num{
+    font-weight:bold;
+    color:red;
+    font-size: 45px;
+}
+.icon-num-label{
+    background: transparent !important;
+    margin-top: 145px;
+    border: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.person-pop{
+    width: 300px;
+    height: 150px;
+    font-size: 12px;
+}
+.person-pop-content{
+    width: 250px;
+    height: 150px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.person-pop-left{
+    width: 150px;
+    height: 150px;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+
+}
+.person-pop-right{
+    width: 100px;
+    height: 150px;
+    float: right;
+}
+
+.vehicle-pop{
+    width: 300px;
+    height: 150px;
+    font-size: 12px;
+}
+.vehicle-pop-content{
+    width: 250px;
+    height: 150px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.vehicle-pop-left{
+    width: 150px;
+    height: 150px;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+}
+.vehicle-pop-right{
+    width: 100px;
+    height: 150px;
+    float: right;
+}
+
+div.gaea-popup-content-wrapper, .gaea-popup-tip{
+    border-radius: 5px;
+    background-color: #43102c;
+    color: #ffffff;
+}
+
+.icon-num-min{
+    /*font-weight:bold;
+    color:red;
+    font-size: 30px;*/
+    font-weight:bold;
+    color:red;
+    font-size: 30px;
+}
+.icon-num-label-min{
+    /*background: transparent !important;
+    margin-top: 110px;
+    border: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;*/
+    background: transparent !important;
+    margin-top: 120px;
+    border: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.icon-num-mid{
+    font-weight:bold;
+    color:red;
+    font-size: 30px;
+}
+.icon-num-label-mid{
+    background: transparent !important;
+    margin-top: 120px;
+    border: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+
+
+.icon-name{
+    width: 70%;
+    line-height: 20px;
+    text-align: right;
+    top: 17%;
+    position: absolute;
+    right: 0;
+    font-size: 13px;
+}
+
+
+
+/*
+@media screen and (min-width: 1920px){
+    body {
+        overflow: hidden;
+    }
+}*/
+/*
+div.leaflet-control-attribution{
+    display: none;
+}*/

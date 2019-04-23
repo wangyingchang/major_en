@@ -1,0 +1,103 @@
+<div id="today-statistics">
+    <link href="./component/todayStatistics/todayStatistics.css" rel="stylesheet">
+    <div class="today-statistics-title">Today's Data</div>
+
+    <div class="today-statistics-content">
+        <div>
+            <div class="bg_border" id="veneu">
+                <img class="today_img" :src="today_img">
+                <div class="today_top_item">
+                    <div class="color_blue">{{statisticsName}}</div>
+                    <div class="today_count" id="venue_count">{{venue_count}}</div>
+                    <!--<div class="color_blue">个</div>-->
+                </div>
+            </div>
+            <div class="bg_border" id="work_person">
+                <img class="today_img" src="assets/ic_person.svg">
+                <div class="today_top_item">
+                    <div class="color_blue">Staff</div>
+                    <div class="today_count" id="person_count">{{police_count}}</div>
+                    <div class="color_blue">人</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <Row style="margin-top: 70px;">
+            <i-col span="8">
+                <div class="person_flow">
+                    <div class="person_img_content">
+                        <img class="img_person" src="assets/today/person_flow.svg">
+                        <div class="normal_name">People Detected</div>
+                    </div>
+                    <div class="person_count">
+                        <span id="flow_count">{{person_flow_count}}</span>
+                        <!--<span class="today_unit">人</span>-->
+                    </div>
+                </div>
+            </i-col>
+            <i-col span="8">
+                <div class="allow_person">
+                    <div class="person_img_content">
+                        <img class="img_person" src="assets/today/allow_person.svg">
+                        <div class="normal_name">People Monitored</div>
+                    </div>
+                    <div class="person_count">
+                        <span id="allow_count">{{person_allow_count}}</span>
+                        <!--<span class="today_unit">人</span>-->
+                    </div>
+                </div>
+            </i-col>
+            <i-col span="8">
+                <div class="doubt_person">
+                    <div class="person_img_content">
+                        <img class="img_person" src="assets/today/doubt_person.svg">
+                        <div class="normal_name">Suspicious People</div>
+                    </div>
+                    <div class="person_count">
+                        <span id="doubt_count">{{person_doubt_count}}</span>
+                        <!--<span class="today_unit">人</span>-->
+                    </div>
+                </div>
+            </i-col>
+        </Row>
+        <Row style="margin-top: 80px;">
+            <i-col span="8">
+                <div class="car_flow">
+                    <div class="person_img_content">
+                        <img class="img_person" src="assets/today/car_flow.svg">
+                        <div class="normal_name">Vehicles Detected</div>
+                    </div>
+                    <div class="person_count">
+                        <span id="car_count">{{car_count}}</span>
+                        <!--<span class="today_unit">辆</span>-->
+                    </div>
+                </div>
+            </i-col>
+            <i-col span="8">
+                <div class="allow_car">
+                    <div class="person_img_content">
+                        <img class="img_person" src="assets/today/allow_car.svg">
+                        <div class="normal_name">Vehicles Monitored</div>
+                    </div>
+                    <div class="person_count">
+                        <span id="allow_car_count">{{allow_car_count}}</span>
+                        <!--<span class="today_unit">辆</span>-->
+                    </div>
+                </div>
+            </i-col>
+            <i-col span="8">
+                <div class="doubt_car">
+                    <div class="person_img_content">
+                        <img class="img_person" src="assets/today/doubt_car.svg">
+                        <div class="normal_name">Suspicious Vehicles</div>
+                    </div>
+                    <div class="person_count">
+                        <span id="doubt_car_count">{{doubt_car_count}}</span>
+                        <!--<span class="today_unit">辆</span>-->
+                    </div>
+                </div>
+            </i-col>
+        </Row>
+    </div>
+</div>

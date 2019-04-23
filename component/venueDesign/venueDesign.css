@@ -1,0 +1,141 @@
+#venue-design{
+    width: 878px;
+}
+.venue-design-title{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    line-height: 1em;
+}
+.venue-design-content{
+    background: url("../../assets/bg_normal.svg") no-repeat;
+    width: 878px;
+    height: 586px;
+}
+.venue-chart-content{
+    padding: 30px;
+}
+#venue-chart{
+    float: left;
+}
+.current-venue-statistics{
+    float: right;
+}
+.venue_person_content,.venue_car_content{
+    background: #50042e;
+    width: 288px;
+    height: 134px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+.venue_car_content{
+    margin-top: 45px;
+}
+.ic_venue_person{
+    width: 17px;
+    height:17px;
+    margin-right: 20px;
+}
+.ic_venue_car{
+    width: 23px;
+    height:17px;
+    margin-right: 20px;
+}
+.venue-right-text{
+    padding-top: 30px;
+    font-size: 16px;
+}
+.venue-right-value{
+    margin-top: 15px;
+}
+#venue-person-count,#venue-car-count{
+    font-size: 32px;
+    color: #f7931e;
+}
+.venue-tag{
+    background: url("../../assets/bg_yellow_border_warning.svg") no-repeat;
+    display: inline-block;
+    text-align: center;
+    width: 140px!important;
+    height: 38px!important;
+    line-height: 38px!important;
+    color: white;
+    font-size: 20px;
+    margin-left: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+}
+.venue-tag-active{
+    background: url("../../assets/bg_warning_list_tag.svg") no-repeat;
+}
+.venue-tag-content{
+    text-align: center;
+    padding-top: 35px;
+    /*padding-top: 42px;*/
+    /*cursor: pointer;*/
+    /*overflow: hidden;*/
+}
+.swiper-button-prev,.swiper-button-next{
+    margin-top: 0;
+}
+.swiper-button-prev{
+    background-image: url("../../assets/arrow_left.svg");
+}
+.swiper-button-next{
+    background-image: url("../../assets/arrow_right.svg");
+}
+.venue-tag-wrapper{
+    white-space: nowrap;
+    margin-left: 20px;
+    /*overflow-x: auto;*/
+}
+.venue-tag{
+    display: inline-block;
+}
+
+.venue-tag-wrapper::-webkit-scrollbar {/*滚动条整体样式*/
+    /*width: 10px;     !*高宽分别对应横竖滚动条的尺寸*!*/
+    height: 10px;
+}
+.venue-tag-wrapper::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #f5c75f;
+}
+.venue-tag-wrapper::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+.swiper-container{
+    width: 100%;
+    height: 95px;
+    overflow: hidden;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-button-next, .swiper-button-prev{
+    top: 35%;
+}

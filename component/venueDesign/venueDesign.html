@@ -1,0 +1,42 @@
+<div id="venue-design">
+    <link href="./component/venueDesign/venueDesign.css" rel="stylesheet">
+    <div class="venue-design-title">Data of the Venue</div>
+    <div class="venue-design-content">
+        <div class="venue-tag-content swiper-container">
+            <ul class="venue-tag-wrapper swiper-wrapper">
+                <!--<li class="venue-tag swiper-slide venue-tag-active" @click="switchVenueTag($event,'all')">All</li>-->
+                <!--<li class="venue-tag swiper-slide" v-for="(item,index) in venuePoliceAndCapacity" @click="switchVenueTag($event,index)">{{item.name}}</li>-->
+                <!--<li class="venue-tag swiper-slide" @click="switchVenueTag()">B场馆</li>
+                <li class="venue-tag swiper-slide" @click="switchVenueTag()">C场馆</li>
+                <li class="venue-tag swiper-slide" @click="switchVenueTag()">D场馆</li>
+                <li class="venue-tag swiper-slide" @click="switchVenueTag()">E场馆</li>-->
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="venue-chart-content">
+            <div id="venue-chart" style="width: 480px;height: 460px;"></div>
+            <div class="current-venue-statistics">
+                <div class="venue_person_content">
+                    <div class="venue-right-text">Current Amount (People)/Capacity</div>
+                    <div class="venue-right-value">
+                        <img class="ic_venue_person" src="assets/ic_venue_person.svg">
+                        <span id="venue-person-count">{{personCurrent}}</span>
+                        <span>/</span>
+                        <span id="venue-person-container">{{personCapacity}}</span>
+                    </div>
+                </div>
+                <div class="venue_car_content">
+                    <div class="venue-right-text">Current Amount (Vehicles)/Capacity</div>
+                    <div class="venue-right-value">
+                        <img class="ic_venue_car" src="assets/ic_venue_car.svg">
+                        <span id="venue-car-count">{{vehicleCurrent}}</span>
+                        <span>/</span>
+                        <span id="venue-car-container">{{vehicleCapacity}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

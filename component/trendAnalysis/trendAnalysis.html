@@ -1,0 +1,70 @@
+<div id="trend-analysis">
+    <link href="./component/trendAnalysis/trendAnalysis.css" rel="stylesheet">
+    <div class="trend-analysis-title">Trend Analysis</div>
+    <div class="trend-analysis-content">
+        <div class="tag">
+            <ul>
+                <li class="trend-analysis_tag trend-analysis-active" id="trend-week" @click="changeTag('trend-week')">
+                    Week
+                </li>
+                <li class="trend-analysis_tag" id="trend-month" @click="changeTag('trend-month')">
+                    Month
+                </li>
+                <li class="trend-analysis_tag" id="trend-year" @click="changeTag('trend-year')">
+                    Year
+                </li>
+            </ul>
+        </div>
+        <div class="sub-tag">
+            <ul>
+                <li id="trend-person-flow" class="trend-sub-tag trend-sub-active" @click="changeSubTag($event)">People Detected
+                </li>
+                <li id="trend-allow-person" class="trend-sub-tag" @click="changeSubTag($event)">People Monitored
+                </li>
+                <li id="trend-doubt-person" class="trend-sub-tag" @click="changeSubTag($event)">Suspicious People
+                </li>
+                <li id="trend-car-flow" class="trend-sub-tag" @click="changeSubTag($event)">Vehicles
+                </li>
+                <li id="trend-allow-car" class="trend-sub-tag" @click="changeSubTag($event)">Vehicles Monitored
+                </li>
+                <li id="trend-doubt-car" class="trend-sub-tag" @click="changeSubTag($event)">Suspicious Vehicles
+                </li>
+            </ul>
+        </div>
+        <div style="width: 92%;height: 8%;font-size: 18px;margin-left: 35px;margin-top:2%">
+            <span style="color: white" id="count_title">Weekly Total Amount (People) :</span><span id="people-week-sum" style="margin-left: 30px">20245</span>
+            <span style="float: right;margin-left: 10px;color: #60ff00;">
+                year-on-year
+                <span id="tb" style="font-size: 24px">10%<img src="assets/icons/arrow_down.svg" style="width: 30px"></span>
+            </span>
+            <span style="float: right;color: red;">
+                month-on-month
+                <span id="hb" style="font-size: 24px">10%<img src="assets/icons/arrow_up.svg" style="width: 30px"></span>
+            </span>
+        </span>
+        </div>
+        <div id="modle4L" style="width: 100%;height: 10%">   <!--提示圆圈-->
+            <ul  id="modle4L_ul" style="width: 100%">
+
+
+            </ul>
+            <div  id="hengxian" style="display: none;">
+            </div>
+        </div>
+        <div class="trend-echarts" style="height: 60%;width: 100%;">
+            <div class="analysis-trend-week">
+                <div class="trend-week-echarts" id="trend-week-echarts" style="width: 875px;height: 261px">
+                </div>
+            </div>
+            <div class="analysis-trend-month" style="display: none;">
+                <div class="trend-month-echarts" id="trend-month-echarts" style="width: 875px;height: 261px">
+                </div>
+            </div>
+            <div class="analysis-trend-year" style="display: none;">
+                <div id="trend-year-echarts" style="width: 875px;height: 261px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

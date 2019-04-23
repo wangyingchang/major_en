@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="js/gl/gl.min.css">
+    <link rel="stylesheet" href="js/iview/dist/styles/iview.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="js/swiper/swiper.min.css" rel="stylesheet">
+    <link href="./component/warningList/warningList.css" rel="stylesheet">
+    <script type="text/javascript" src="js/gl/gl.min.js"></script>
+    <script type="text/javascript" src="js/vue/vue.min.js"></script>
+    <script src="js/iview/dist/iview.min.js"></script>
+    <script src="js/conf.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./component/warningList/warningList.js"></script>
+    <script type="text/javascript" src="./component/todayStatistics/todayStatistics.js"></script>
+    <script type="text/javascript" src="./component/statisticsAnalysis/statisticsAnalysis.js"></script>
+    <script type="text/javascript" src="./component/totalStatistics/totalStatistics.js"></script>
+    <script type="text/javascript" src="./component/venueDesign/venueDesign.js"></script>
+    <script type="text/javascript" src="./component/venueTotalStatistics/venueTotalStatistics.js"></script>
+    <script type="text/javascript" src="./component/venueIntro/venueIntro.js"></script>
+    <script type="text/javascript" src="./component/trendAnalysis/trendAnalysis.js"></script>
+    <script type="text/javascript" src="./component/venuePlan/venuePlan.js"></script>
+    <script type="text/javascript" src="./component/beyonetIntro/beyonetIntro.js"></script>
+    <script src="js/reconnecting-websocket.min.js"></script>
+    <title>Integrated Security Platform for Major Events</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="header">
+            <div class="header-title">Integrated Security Platform for Major Events</div>
+        </div>
+
+        <div class="content">
+
+            <div class="left-content">
+                <today-statistics :venueId="venueId" :level="currentLevel" :socketData="populationStatistics"></today-statistics>
+                <statistics-analysis class="statistics-analysis" :venueId="venueId" :level="currentLevel"></statistics-analysis>
+                <trend-analysis class="trend-analysis" :venueId="venueId" :level="currentLevel"></trend-analysis>
+                <total-statistics :venueId="venueId" :level="currentLevel"></total-statistics>
+            </div>
+
+            <div class="map-container">
+                <div id="map"></div>
+
+                <div class="activity">
+                    <div class="today-activity">
+                        <span>Today's Events </span>
+                        <div class="major_number">
+                            <span>0</span>
+                            <span>5</span>
+                        </div>
+                        <!--<span>场</span>-->
+                    </div>
+                    <venue-intro class="venue-popup" :venueId="venueId" :level="currentLevel" @reset_venue="resetVenueId"></venue-intro>
+                    <!--<bayonet-intro class="bayonet-popup" :venueId="venueId" :level="currentLevel"></bayonet-intro>-->
+                </div>
+
+                <div class="protect">
+                    <div class="protect-chart" @click="onLevelChange('LEVEL_ONE')">
+                        <div id="LEVEL_ONE" style="width: 341px;height: 269px;">
+                        </div>
+                    </div>
+                    <div class="protect-chart" @click="onLevelChange('LEVEL_TWO')">
+                        <div id="LEVEL_TWO" style="width: 341px;height: 269px;">
+                        </div>
+                    </div>
+                    <div class="protect-chart" @click="onLevelChange('LEVEL_THREE')">
+                        <div id="LEVEL_THREE" style="width: 341px;height: 269px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-type">
+                    <div class="resource-dropdown" v-for="(value,key) in currentLayerData">
+                        <div onselectstart="return false" class="resource-select-title" @click="onParentResourceTypeSelect($event)">{{key}}</div>
+                        <ul class="resource-select-options">
+                            <li class="resourceSelected" v-for="(v,k) in value" :parent="key" :value="k" :class="k"
+                                :style="changeStyle(k)" onselectstart="return false" @click="onSelectResourceType">
+                                <div class="icon-name">{{k}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-content">
+                <warning-list :venueId="venueId" :level="currentLevel" :alarmPerson="alarmPerson" :alarmVehicle="alarmVehicle"></warning-list>
+                <venue-design :venueId="venueId" :level="currentLevel" ref="venueStatistics" @set_venue_center="setVenueCenter"></venue-design>
+                <keep-alive>
+                    <venue-total-statistics class="venue-total-statistics" :venueId="venueId" :level="currentLevel"></venue-total-statistics>
+                </keep-alive>
+                <keep-alive>
+                    <venue-plan class="venuePlan" :venueId="venueId" :level="currentLevel"></venue-plan>
+                </keep-alive>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+    </div>
+    <script src="js/index1.js"></script>
+</body>
+
+</html>
